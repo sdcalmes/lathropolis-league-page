@@ -153,7 +153,7 @@
     }
 
     .favoritePlayer {
-        height: 65px;
+        height: 100%;
         vertical-align: bottom;
     }
 
@@ -225,7 +225,7 @@
                 Favorite Player
             </div>
             <div class="infoIcon playerIcon">
-                <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player"/>
+                <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
             </div>
             <div class="infoAnswer">
                 {players[viewManager.favoritePlayer].fn} {players[viewManager.favoritePlayer].ln}
@@ -236,10 +236,10 @@
     {#if viewManager.mode}
         <div class="infoSlot">
             <div class="infoLabel">
-                Win Now or Rebuild?
+                Fantasy Mode
             </div>
             <div class="infoIcon">
-                <img class="rebuildOrWin" src="/{viewManager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
+                <img class="rebuildOrWin" src="/{viewManager.mode.replace(' ', '%20')}.png" alt="fantasy mode" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
             </div>
             <div class="infoAnswer">
                 {viewManager.mode}
