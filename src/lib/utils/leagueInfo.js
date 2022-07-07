@@ -31,6 +31,7 @@ export const managers = [
     "fantasyStart": 2009, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "min", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Win 'ships", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/drew.jpg",
     "rival": {
       name: "Sam", // Can be anything (usually your rival's name)
       link: 1, // manager array number within this array, or null to link back to all managers page
@@ -53,6 +54,7 @@ export const managers = [
     "fantasyStart": 2012, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Beat Drew", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/managers/drew.jpg",
     "rival": {
       name: "Drew", // Can be anything (usually your rival's name)
       link: 0, // manager array number within this array, or null to link back to all managers page
@@ -75,12 +77,14 @@ export const managers = [
     "fantasyStart": 2007, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "If you ain't first, you're last", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/justin.jpg",
     "rival": {
       name: "F'James", // Can be anything (usually your rival's name)
       link: 6, // manager array number within this array, or null to link back to all managers page
       image: "/managers/james.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
     },
     "favoritePlayer": 462, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
+    "favoritePlayerLocal": true,
     "valuePosition": "RB", // (optional) Favorite position (QB, WR, RB, TE, etc.)
     "rookieOrVets": "Rookies", // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
     "philosophy": "Opportunity knocks",
@@ -97,6 +101,7 @@ export const managers = [
     "fantasyStart": 2013, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Survive", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/joey.png",
     "rival": {
       name: "Drew", // Can be anything (usually your rival's name)
       link: 0, // manager array number within this array, or null to link back to all managers page
@@ -119,6 +124,7 @@ export const managers = [
     "fantasyStart": 2012, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Most Transactions", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/victor.png",
     "rival": {
       name: "Dallman", // Can be anything (usually your rival's name)
       link: 9, // manager array number within this array, or null to link back to all managers page
@@ -141,6 +147,7 @@ export const managers = [
     "fantasyStart": 2013, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Flyers > Consistency", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/andy.jpg",
     "rival": {
       name: "Drew", // Can be anything (usually your rival's name)
       link: 0, // manager array number within this array, or null to link back to all managers page
@@ -163,6 +170,7 @@ export const managers = [
     "fantasyStart": 2009, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "High Risk, High Reward", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/james.png",
     "rival": {
       name: "Rival", // Can be anything (usually your rival's name)
       link: 2, // manager array number within this array, or null to link back to all managers page
@@ -185,12 +193,13 @@ export const managers = [
     "fantasyStart": 2013, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Pick cool guys and hope for the best", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/jake.jpg",
     "rival": {
       name: "Drew", // Can be anything (usually your rival's name)
       link: 0, // manager array number within this array, or null to link back to all managers page
       image: "/managers/drew.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
     },
-    "favoritePlayer": 9999, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
+    "favoritePlayer": 2078, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
     "valuePosition": "WR", // (optional) Favorite position (QB, WR, RB, TE, etc.)
     "rookieOrVets": "Vets", // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
     "philosophy": "Pray for points",
@@ -207,6 +216,7 @@ export const managers = [
     "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Embrace the Tilt", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/djames.jpg",
     "rival": {
       name: "Jake", // Can be anything (usually your rival's name)
       link: 7, // manager array number within this array, or null to link back to all managers page
@@ -229,6 +239,7 @@ export const managers = [
     "fantasyStart": 1969, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "nyj", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Building a tree stand", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/dallman.jpeg",
     "rival": {
       name: "Scent", // Can be anything (usually your rival's name)
       link: 9, // manager array number within this array, or null to link back to all managers page
@@ -251,6 +262,7 @@ export const managers = [
     "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Build through the Draft", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/joe.jpg",
     "rival": {
       name: "Big Andy", // Can be anything (usually your rival's name)
       link: 5, // manager array number within this array, or null to link back to all managers page
@@ -273,6 +285,7 @@ export const managers = [
     "fantasyStart": 2010, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
     "mode": "Idk I just vibe", // (optional) 'Win Now', 'Dynasty', or 'Rebuild' (anything else and you will need to add a new png to /static/ similar to the 'Rebuild.png' and 'Win Now.png' currently in there)
+    "modeImg": "/modes/luke.jpg",
     "rival": {
       name: "Luke", // Can be anything (usually your rival's name)
       link: 11, // manager array number within this array, or null to link back to all managers page

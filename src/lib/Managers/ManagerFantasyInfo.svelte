@@ -32,8 +32,8 @@
 
     .infoIcon {
         display: inline-flex;
-        height: 70px;
-        width: 70px;
+        height: 100px;
+        width: 100px;
         justify-content: center;
         align-items: center;
         border-radius: 100%;
@@ -92,7 +92,7 @@
     }
 
     .rebuildOrWin {
-        height: 70px;
+        height: 100px;
     }
 
     .valuePosition {
@@ -225,7 +225,11 @@
                 Favorite Player
             </div>
             <div class="infoIcon playerIcon">
-                <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
+                {#if viewManager.favoritePlayerLocal}
+                    <img class="favoritePlayer" src="./players/{viewManager.favoritePlayer}.jpg" alt="favorite player" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
+                {:else}
+                    <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
+                {/if}
             </div>
             <div class="infoAnswer">
                 {players[viewManager.favoritePlayer].fn} {players[viewManager.favoritePlayer].ln}
@@ -239,7 +243,7 @@
                 Fantasy Mode
             </div>
             <div class="infoIcon">
-                <img class="rebuildOrWin" src="/{viewManager.mode.replace(' ', '%20')}.png" alt="fantasy mode" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
+                <img class="rebuildOrWin" src="{viewManager.modeImg.replace(' ', '%20')}" alt="fantasy mode" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
             </div>
             <div class="infoAnswer">
                 {viewManager.mode}

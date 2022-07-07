@@ -83,7 +83,7 @@ export const generateGraph = ({stats, x, y, stat, header, field, short, secondFi
         short
     }
 
-    const sortedStats = [...stats].sort((a, b) => a.rosterID - b.rosterID);
+    const sortedStats = [...stats].sort((a, b) => b.powerScore - a.powerScore);
 
     for(const indivStat of sortedStats) {
         graph.stats.push(Math.round(indivStat[field]));
