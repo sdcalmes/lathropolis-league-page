@@ -40,10 +40,6 @@ import { beforeUpdate } from 'svelte';
         width: 45%;
     }
 
-    /* .detailsHeader {
-        width: 28%;
-    } */
-
 </style>
 
 <div class="sidebetContainer">
