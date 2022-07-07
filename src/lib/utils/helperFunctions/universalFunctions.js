@@ -118,7 +118,7 @@ export const generateGraph = ({stats, x, stat, header, field, short, secondField
         year
     }
 
-    const sortedStats = [...stats].sort((a, b) => b[field] - a[field]);
+    const sortedStats = [...stats].sort((a, b) => b.powerScore - a.powerScore);
 
     for(const indivStat of sortedStats) {
         graph.stats.push(indivStat[field]);
