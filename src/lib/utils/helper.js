@@ -1,5 +1,6 @@
 import {getLeagueData} from './helperFunctions/leagueData';
 import {dues, leagueID, leagueName, dynasty, managers, homepageText, enableBlog} from './leagueInfo';
+import {sidebets} from './sidebets';
 import {getLeagueTransactions} from './helperFunctions/leagueTransactions';
 import {getNflState} from './helperFunctions/nflState';
 import {getLeagueRosters} from './helperFunctions/leagueRosters';
@@ -22,6 +23,7 @@ export {
     homepageText,
     gotoManager,
     managers,
+    sidebets,
     getLeagueData,
     getLeagueTransactions,
     getNflState, 

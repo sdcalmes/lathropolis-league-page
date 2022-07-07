@@ -287,20 +287,20 @@
     <h2 class="sectionHeading" bind:this={six}>Section 6 League Finances</h2>
     
     <h3 bind:this={sixOne}>6.1 League Dues</h3>
-    <p>League dues are set at {dues}$. Dues are collected through Venmo and collection will be sent out no later than the first of August. All managers must be fully paid up before the draft. In the event that a manager fails to pay before the deadline, they will autodraft. Every week that goes by without payment will be a 10 point deduction in their weekly score.</p>
+    <p>League dues are set at ${dues}. Dues are collected through Venmo and collection will be sent out no later than the first of August. All managers must be fully paid up before the draft. In the event that a manager fails to pay before the deadline, they will autodraft. Every week that goes by without payment will be a 10 point deduction in their weekly score.</p>
     
     <h3 bind:this={sixTwo}>6.2 Payout</h3>
-    <p>League payout is structured as follows, based on percentages:</p>
+    <p>League payout (totaling ${dues * 12}) is structured as follows, based on percentages:</p>
     <p><strong>Addendum: </strong>If a manager violates a sidebet and incurs a penalty, the actual amount will be x2 for all categories.</p>
     <ul>
         <li>1st place: ${dues * 5.95}</li>
         <li>2nd place: ${dues * 2.5}</li>
         <li>3rd place: ${dues}</li>
-        <li>Weekly High Score: ${dues / (20/3)}</li>
+        <li>Weekly High Score: ${dues / (20/3)} (includes during playoffs)</li>
     </ul>
     <p>In the event that a manager was fined due to late payment, their extra fee will be added to the winner's payout. Similarly, if new managers come into the league and the payout is smaller, the difference will come out of the winner's prize.</p>
     
     <h3 bind:this={sixThree}>6.3 Raising Dues</h3>
-    <p>A ⅔ majority vote is required in order to raise league dues. In the event that a manager is no longer financially comfortable with the buyin, finding a co-manager to split the cost is reccomended.</p>
+    <p>A ⅔ majority vote is required in order to raise league dues. In the event that a manager is no longer financially comfortable with the buyin, they can suck my butt.</p>
 
 </div>
