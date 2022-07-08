@@ -114,6 +114,7 @@ const combThroughTransactions = async (week, currentLeagueID) => {
 				managers[roster.roster_id] = {
 					avatar: `https://sleepercdn.com/avatars/thumbs/${user.avatar}`,
 					name: user.metadata.team_name ? user.metadata.team_name : user.display_name,
+					display_name: user.display_name
 				}
 			} else {
 				managers[roster.roster_id] = {
@@ -122,7 +123,6 @@ const combThroughTransactions = async (week, currentLeagueID) => {
 				}
 			}
 		}
-
 		if(!currentManagers) {
 			currentManagers = managers;
 		}

@@ -1,5 +1,5 @@
 import { getLeagueData } from './leagueData';
-import { leagueID } from '$lib/utils/leagueInfo';
+import { leagueID, usesMedian } from '$lib/utils/leagueInfo';
 import { getNflState } from './nflState';
 import { getLeagueRosters } from "./leagueRosters"
 import { getLeagueUsers } from "./leagueUsers"
@@ -248,6 +248,7 @@ const analyzeRosters = ({year, roster, users, regularSeason, originalManagers}) 
 		originalManagers[rosterID] = {
 			avatar: `https://sleepercdn.com/avatars/thumbs/${user.avatar}`,
 			name: user.metadata.team_name ? user.metadata.team_name : user.display_name,
+			display_name: user.display_name
 		}
 	} else {
 		originalManagers[rosterID] = {
@@ -261,7 +262,10 @@ const analyzeRosters = ({year, roster, users, regularSeason, originalManagers}) 
 
 	// fptsFor and fptsPerGame are used for both rosterRecords and seasonLongPoints
 	const fptsFor = roster.settings.fpts + (roster.settings.fpts_decimal / 100);
-	const fptsPerGame = round(fptsFor / (roster.settings.wins + roster.settings.losses + roster.settings.ties))
+	let fptsPerGame = round(fptsFor / (roster.settings.wins + roster.settings.losses + roster.settings.ties))
+	if (usesMedian) {
+		fptsPerGame *= 2;
+	}
 
 	const rosterRecords = {
 		wins:  roster.settings.wins,
