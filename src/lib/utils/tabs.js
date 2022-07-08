@@ -42,6 +42,11 @@ export const tabs = [
                 dest: '/standings',
             },
             {
+                icon: 'payments',
+                label: 'Sidebets',
+                dest: '/sidebets',
+            },
+            {
                 icon: 'view_comfy',
                 label: 'Drafts',
                 dest: '/drafts',

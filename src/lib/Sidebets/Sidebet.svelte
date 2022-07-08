@@ -1,8 +1,8 @@
 <script>
     import { sidebets } from '$lib/utils/helper';
-import { beforeUpdate } from 'svelte';
 
     console.log(sidebets)
+
 </script>
 
 <style>
@@ -37,15 +37,15 @@ import { beforeUpdate } from 'svelte';
     }
 
     .rewardsHeader {
-        width: 45%;
+        width: 20%;
     }
 
 </style>
 
 <div class="sidebetContainer">
     <div>
-        {#each Object.entries(sidebets) as [year, bets]}
-            <h1>{year}</h1>
+        {#each sidebets as sidebetYear}
+            <h1>{sidebetYear.year}</h1>
             <table id="sidebets">
                 <tr>
                     <th class="ownerHeader">Owner A</th>
@@ -54,7 +54,7 @@ import { beforeUpdate } from 'svelte';
                     <th class="detailsHeader">Details</th>
                     <th class="winnerHeader">Winner</th>
                 </tr>
-                {#each bets as bet}
+                {#each sidebetYear.sidebets as bet}
                     <tr>
                         <td>{bet.owner1}</td>
                         <td>{bet.owner2}</td>
@@ -64,7 +64,6 @@ import { beforeUpdate } from 'svelte';
                     </tr>
                 {/each}
             </table>
-            
         {/each}
         </div>
 </div>

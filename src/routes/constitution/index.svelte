@@ -255,7 +255,7 @@
     <h2 class="sectionHeading" bind:this={four}>Section 4 Postseason</h2>
     
     <h3 bind:this={fourOne}>4.1 Playoffs</h3>
-    <p>At the end of the season 6 teams will make the playoffs. The first round of playoffs will commence in week 15. The top 5 seeded teams will make the playoff with the 6th team being the "at-large" bid. The "at-large" is chosen based on the most Points For out of the remaining teams.
+    <p>At the end of the season 6 teams will make the playoffs. The first round of playoffs will commence in week 15. The top 6 seeded teams will make the playoff with the top two teams receiving byes.
         The top two seeds will receive a round 1 bye.  Each playoff matchup will only last one week and the winner will advance. Week 18 will not be used.</p>
     
     <h3 bind:this={fourTwo}>4.2 Seeding Tiebreakers</h3>
