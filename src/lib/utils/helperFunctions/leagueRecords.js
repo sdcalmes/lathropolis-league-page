@@ -1,5 +1,5 @@
 import { getLeagueData } from './leagueData';
-import { leagueID } from '$lib/utils/leagueInfo';
+import { leagueID, usesMedian } from '$lib/utils/leagueInfo';
 import { getNflState } from './nflState';
 import { getLeagueRosters } from "./leagueRosters";
 import { waitForAll } from './multiPromise';
@@ -220,14 +220,28 @@ const analyzeRosters = ({year, roster, regularSeason}) => {
     // team name and logo are tied to the ownerID
     const rosterID = roster.roster_id;
 
-    const managers = getManagers(roster);
+	if(user) {
+		originalManagers[rosterID] = {
+			avatar: `https://sleepercdn.com/avatars/thumbs/${user.avatar}`,
+			name: user.metadata.team_name ? user.metadata.team_name : user.display_name,
+			display_name: user.display_name
+		}
+	} else {
+		originalManagers[rosterID] = {
+			avatar: `https://sleepercdn.com/images/v2/icons/player_default.webp`,
+			name: 'Unknown Manager',
+		}
+	}
 
 	// season hasn't started, no records to obtain
 	if(roster.settings.wins == 0 && roster.settings.ties == 0 && roster.settings.losses == 0) return;
 
 	// fptsFor and fptsPerGame are used for both rosterRecords and seasonLongPoints
 	const fptsFor = roster.settings.fpts + (roster.settings.fpts_decimal / 100);
-	const fptsPerGame = round(fptsFor / (roster.settings.wins + roster.settings.losses + roster.settings.ties));
+	let fptsPerGame = round(fptsFor / (roster.settings.wins + roster.settings.losses + roster.settings.ties))
+	if (usesMedian) {
+		fptsPerGame *= 2;
+	}
 
 	const rosterRecords = {
 		wins:  roster.settings.wins,

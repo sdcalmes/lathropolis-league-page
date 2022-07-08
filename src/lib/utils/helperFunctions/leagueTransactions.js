@@ -97,6 +97,29 @@ const combThroughTransactions = async (week, currentLeagueID) => {
 
 		leagueIDs.push(currentLeagueID);
 
+		const rosters = rosterRes.rosters;
+	
+		const managers = {};
+	
+		for(const roster of rosters) {
+			const user = users[roster.owner_id];
+			if(user) {
+				managers[roster.roster_id] = {
+					avatar: `https://sleepercdn.com/avatars/thumbs/${user.avatar}`,
+					name: user.metadata.team_name ? user.metadata.team_name : user.display_name,
+					display_name: user.display_name
+				}
+			} else {
+				managers[roster.roster_id] = {
+					avatar: `https://sleepercdn.com/images/v2/icons/player_default.webp`,
+					name: 'Unknown Manager',
+				}
+			}
+		}
+		if(!currentManagers) {
+			currentManagers = managers;
+		}
+
 		if(!currentSeason) {
 			currentSeason = leagueData.season;
 		}

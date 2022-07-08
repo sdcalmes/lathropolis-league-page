@@ -1,5 +1,6 @@
 <script>
     import {round} from '$lib/utils/helper'
+    import { usesMedian } from '$lib/utils/leagueInfo';
   	import RecordsAndRankings from './RecordsAndRankings.svelte';
 
     export let key, leagueManagerRecords, leagueTeamManagers, leagueWeekHighs, leagueWeekLows, allTimeBiggestBlowouts, allTimeClosestMatchups, mostSeasonLongPoints, leastSeasonLongPoints, transactionTotals;
@@ -54,12 +55,18 @@
             }
 
             lineupIQs.push(lineupIQ)
+
+            let fptsPerGameCalc = round(leagueRosterRecord.fptsFor / denominator);
+            if (usesMedian) {
+                fptsPerGameCalc *= 2;
+            }
         
             fptsHistories.push({
-                managerID: key,
-                fptsFor: round(leagueManagerRecord.fptsFor),
-                fptsAgainst: round(leagueManagerRecord.fptsAgainst),
-                fptsPerGame: round(leagueManagerRecord.fptsFor / denominator),
+                rosterID: key,
+                manager: currentManagers[key],
+                fptsFor: round(leagueRosterRecord.fptsFor),
+                fptsAgainst: round(leagueRosterRecord.fptsAgainst),
+                fptsPerGame: fptsPerGameCalc,
             })
         
             if(leagueManagerRecord.ties > 0) showTies = true;

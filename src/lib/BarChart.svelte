@@ -100,9 +100,37 @@
 <h6>{header}</h6>
 <div class="chartWrapper">
     <div class="barChart" >
-        {#each managerIDs as managerID, ix}
-            <Bar {leagueTeamManagers} {managerID} rosterID={rosterIDs[ix]} {xMin} {xMax} stat={stats[ix]} secondStat={secondStats[ix]} {year} label={labels.stat} color={colors[ix % colors.length]} />
-        {/each}
+        <div class="barChartInner" style="width: {width * .85}px; height: {width * .7 * .66}px" bind:this={el}>
+            <!-- x Axis label and intervals -->
+            {#each stats as stat, ix}
+                <div class="bar{secondStats.length == 0  ? '' : ' opacity'}" style="background-color: {colors[(rosterIDs[ix]-1) % 12]}; width: {chartWidthInterval * 0.8}px; left: {chartWidthInterval * ix + (chartWidthInterval / 2)}px; height: {(stat - yMin) / (yMax - yMin == 0 ? 1 : (yMax - yMin)) * 100}%;">
+                    <span class="barLabel" style="font-size: {barLFont}em;">{stat}{labels.stat}</span>
+                </div>
+            {/each}
+            {#each secondStats as stat, ix}
+                <div class="bar" style="background-color: {colors[(rosterIDs[ix]-1) % 12]}; width: {chartWidthInterval * 0.8}px; left: {chartWidthInterval * ix + (chartWidthInterval / 2)}px; height: {(stat - yMin) / (yMax - yMin == 0 ? 1 : (yMax - yMin)) * 100}%;" />
+            {/each}
+        </div>
+
+        <!-- y Axis label and intervals -->
+        <div class="yAxis">
+            <div class="label yLabel" style="height: {chartHeight}px; font-size: {lFont}em;">{labels.y}</div>
+            <div class="yIntervals" style="right: {chartWidth + 65}px; height: {chartHeight}px;">
+                {#each yScales as yScale, ix}
+                    <div class="label yInterval" style="bottom: {chartHeightInterval * ix}px; font-size: {lFont}em;">{yScale}</div>
+                {/each}
+            </div>
+        </div>
+
+        <!-- x Axis label and intervals -->
+        <div class="xAxis">
+            <div class="label xLabel" style="width: {chartWidth}px; font-size: {lFont}em;">{labels.x}</div>
+            <div class="xIntervals" style="width: {chartWidth}px; top: {chartHeight + 6}px;">
+                {#each managers as manager, ix}
+                    <div class="xInterval" style="left: {chartWidthInterval * (ix + 0.5)}px; font-size: {xIFont}em; height: {xIHeight}px;">{manager.display_name}</div>
+                {/each}
+            </div>
+        </div>
     </div>
 </div>
 
