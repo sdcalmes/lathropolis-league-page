@@ -5,7 +5,7 @@
 <style>
 
     .sidebetsConstrained {
-        max-width: 920px;
+        max-width: 1400px;
         margin: 0 auto;
     }
     
