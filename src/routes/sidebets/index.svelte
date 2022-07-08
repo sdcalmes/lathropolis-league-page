@@ -10,9 +10,5 @@
 </style>
 
 <div class="holder">
-<<<<<<< HEAD
-=======
-    <p>Currently in development.</p>
->>>>>>> 67ddd28 (Add sidebets, update constitution.)
     <Sidebets />
 </div>
