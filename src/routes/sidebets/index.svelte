@@ -10,6 +10,5 @@
 </style>
 
 <div class="holder">
-    <p>Currently in development.</p>
     <Sidebets />
 </div>
