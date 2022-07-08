@@ -12,6 +12,7 @@
         currentManagers[roster.roster_id] = {
             avatar: `https://sleepercdn.com/avatars/thumbs/${user.avatar}`,
             name: user.metadata.team_name ? user.metadata.team_name : user.display_name,
+            display_name: user.display_name
         }
     }
 
@@ -71,6 +72,7 @@
             field: "powerScore",
             short: "ROS Power Ranking"
         };
+        console.log(powerGraph)
 
         graphs = [
             generateGraph(powerGraph, 10)
