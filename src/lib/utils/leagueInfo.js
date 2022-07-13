@@ -212,7 +212,7 @@ export const managers = [
     "name": "D'James",
     //"tookOver": 2020, // (optional) used if a manager took over a team, delete this line or change to null otherwise
     "location": "Minneapolis", // (optional)
-    "bio": "Sidebet addict. I’m either winning the championship or getting tatted. ",
+    "bio": "Sidebet addict. I’m either winning the championship or getting tatted.",
     "photo": "/managers/djames.jpg", // square ratio recommended (no larger than 500x500)
     "fantasyStart": 2014, // (optional) when did the manager start playing fantasy football
     "favoriteTeam": "gb", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
@@ -226,7 +226,7 @@ export const managers = [
     "favoritePlayer": 223, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
     "valuePosition": "WR", // (optional) Favorite position (QB, WR, RB, TE, etc.)
     "rookieOrVets": "Rookies", // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
-    "philosophy": "Investigate Drew for schedule manipulation. Never trade with Justin.",
+    "philosophy": "Wait for James' team to tank, then pillage his village. Never trade with Justin.",
     "tradingScale": 10, // 1 - 10
     "preferredContact": "Text", // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
   },
