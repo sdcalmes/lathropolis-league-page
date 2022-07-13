@@ -1,5 +1,4 @@
 /*   STEP 1   */
-<<<<<<< HEAD
 export const leagueID = "716721398717947904"; // your league ID
 export const leagueName = "Lathropolis Fantasy Football"; // your league name
 export const dues = 100; // (optional) used in template constitution page
