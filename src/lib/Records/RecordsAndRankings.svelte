@@ -178,21 +178,23 @@
         }
         const transactions = [];
 
-        for(const w of wD) {
-            let trades = 0;
-            if(tradesData[0].managerID) {
-                trades = tradesData.find(t => t.managerID == w.managerID)?.trades || 0;
-            } else if(tradesData[0].rosterID) {
-                trades = tradesData.find(t => t.rosterID == w.rosterID)?.trades || 0;
-            }
-            const waivers = w.waivers;
+        for(let i = 1; i <= wD.length; i++) {
+            const waiver = wD.find(w => w.rosterID == i);
+            const trades = tradesData.find(t => t.rosterID == i)?.trades || 0;
+            const waivers = waiver?.waivers || 0;
+            const manager = waiver.manager;
+            const total_transactions = trades + waivers;
             transactions.push({
                 rosterID: w.rosterID,
                 managerID: w.managerID,
                 trades,
                 waivers,
+                total_transactions
             })
         }
+
+        // Sort table by total transactions
+        transactions.sort((a, b) => (a.total_transactions > b.total_transactions) ? -1 : 1);
 
         setGraphs(wD)
         return transactions;
