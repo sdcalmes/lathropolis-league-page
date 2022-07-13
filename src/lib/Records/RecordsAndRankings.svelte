@@ -176,13 +176,18 @@
             const trades = tradesData.find(t => t.rosterID == i)?.trades || 0;
             const waivers = waiver?.waivers || 0;
             const manager = waiver.manager;
+            const total_transactions = trades + waivers;
             transactions.push({
                 rosterID: i,
                 manager,
                 trades,
                 waivers,
+                total_transactions
             })
         }
+
+        // Sort table by total transactions
+        transactions.sort((a, b) => (a.total_transactions > b.total_transactions) ? -1 : 1);
 
         setGraphs(wD)
         return transactions;
