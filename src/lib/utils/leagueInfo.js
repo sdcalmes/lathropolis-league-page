@@ -1,4 +1,5 @@
 /*   STEP 1   */
+<<<<<<< HEAD
 export const leagueID = "716721398717947904"; // your league ID
 export const leagueName = "Lathropolis Fantasy Football"; // your league name
 export const dues = 100; // (optional) used in template constitution page
@@ -267,7 +268,7 @@ export const managers = [
     "rival": {
       name: "Big Andy", // Can be anything (usually your rival's name)
       link: 5, // manager array number within this array, or null to link back to all managers page
-      image: "/managers/joe.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
+      image: "/managers/andy.jpg", // either a specific manager photo or '/managers/everyone.png' or '/managers/question.png'
     },
     "favoritePlayer": 3840, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
     "valuePosition": "TE", // (optional) Favorite position (QB, WR, RB, TE, etc.)
