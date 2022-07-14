@@ -7,18 +7,12 @@
 
     let retired = false;
 
-    // manager.roster is deprecated, pages should be using managerID now
-    let rosterID = manager.roster;
-    let year = null;
-
-    if(manager.managerID) {
-        const dates = getDatesActive(leagueTeamManagers, manager.managerID);
-        if(dates.end) retired = true;
-
-        ({rosterID, year} = getRosterIDFromManagerID(leagueTeamManagers, manager.managerID) || {rosterID, year});
-    }
-
-    const commissioner = manager.managerID ? leagueTeamManagers.users[manager.managerID].is_owner : false;
+    console.log(manager);
+    console.log(rosters);
+    const roster = rosters.rosters.filter(obj => {
+        return obj.roster_id === manager.roster;
+    })[0];
+    const user = users[roster.owner_id];
 </script>
 
 <style>

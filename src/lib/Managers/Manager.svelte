@@ -13,23 +13,28 @@
     export let manager, managers, rostersData, leagueTeamManagers, rosterPositions, transactionsData, awards, records;
 
     let transactions = transactionsData.transactions;
+    let viewManager = managers[manager];
+    console.log(viewManager);
 
     $: viewManager = managers[manager];
 
     $: datesActive = getDatesActive(leagueTeamManagers, viewManager.managerID);
 
-    const  startersAndReserve = rostersData.startersAndReserve;
+    let startersAndReserve = rostersData.startersAndReserve;
     let rosters = rostersData.rosters;
 
-    $: ({rosterID, year} = viewManager.managerID ? getRosterIDFromManagerID(leagueTeamManagers, viewManager.managerID) : {rosterID: viewManager.roster, year: null});
+    let rosterArrNum = viewManager.roster-1;
+    console.log(rosters);
 
-    $: teamTransactions = transactions.filter(t => t.rosters.includes(parseInt(rosterID)));
+    let roster = rosters.filter(obj => {
+        return obj.roster_id === viewManager.roster;
+    })[0];
 
-    $: roster = rosters[rosterID];
+    // let roster = rosters[rosterArrNum];
 
-    $: coOwners = year && rosterID ? leagueTeamManagers.teamManagersMap[year][rosterID].managers.length > 1 : roster.co_owners;
-
-    $: commissioner = viewManager.managerID ? leagueTeamManagers.users[viewManager.managerID].is_owner : false;
+    console.log(roster);
+    console.log(users);
+    let user = users[roster.owner_id];
 
     let players, playersInfo;
     let loading = true;
@@ -60,7 +65,20 @@
             goto(`/managers`);
         }
         manager = newManager;
-        goto(`/manager?manager=${newManager}`, {noscroll});
+        viewManager = managers[newManager];
+
+        teamTransactions = transactions.filter(t => t.rosters.indexOf(viewManager.roster) > -1);
+
+        startersAndReserve = rostersData.startersAndReserve;
+        rosters = rostersData.rosters;
+
+        rosterArrNum = viewManager.roster-1;
+
+        roster = rosters[rosterArrNum];
+
+        user = users[roster.owner_id];
+        console.log(user);
+        goto(`/managers?manager=${manager}`, {noscroll})
     }
 </script>
 
