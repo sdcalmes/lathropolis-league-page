@@ -5,7 +5,11 @@
 
     export let manager, rosters, users, key;
 
-    const roster = rosters.rosters[manager.roster - 1];
+    console.log(manager);
+    console.log(rosters);
+    const roster = rosters.rosters.filter(obj => {
+        return obj.roster_id === manager.roster;
+    })[0];
     const user = users[roster.owner_id];
 </script>
 

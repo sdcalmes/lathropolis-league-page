@@ -12,6 +12,7 @@
     export let manager, managers, rostersData, users, rosterPositions, transactions, currentManagers, awards, records;
 
     let viewManager = managers[manager];
+    console.log(viewManager);
 
     let teamTransactions = transactions.filter(t => t.rosters.indexOf(viewManager.roster) > -1);
 
@@ -19,9 +20,16 @@
     let rosters = rostersData.rosters;
 
     let rosterArrNum = viewManager.roster-1;
+    console.log(rosters);
 
-    let roster = rosters[rosterArrNum];
+    let roster = rosters.filter(obj => {
+        return obj.roster_id === viewManager.roster;
+    })[0];
 
+    // let roster = rosters[rosterArrNum];
+
+    console.log(roster);
+    console.log(users);
     let user = users[roster.owner_id];
 
     let players, playersInfo;
@@ -54,6 +62,7 @@
         roster = rosters[rosterArrNum];
 
         user = users[roster.owner_id];
+        console.log(user);
         goto(`/managers?manager=${manager}`, {noscroll})
     }
 
