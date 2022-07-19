@@ -1,7 +1,7 @@
 <script>
     import Button, { Group, Label } from '@smui/button';
     import BarChart from '../BarChart.svelte'
-    import { cleanName, generateGraph, gotoManager, round } from '$lib/utils/helper';
+    import { generateGraph, gotoManager, round } from '$lib/utils/helper';
 
   	import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
 
