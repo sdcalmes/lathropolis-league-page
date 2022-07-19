@@ -4,7 +4,6 @@
     export let h2h_table;
 
     let pct = h2h_table.w / (h2h_table.w + h2h_table.l)
-    console.log(getColor(pct))
 
     function getColor(value){
         //value from 0 to 1
