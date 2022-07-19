@@ -1642,7 +1642,7 @@
 
     .h2hTable {
         max-width: 1400px;
-        margin: 0 auto;
+        margin: 0 auto 2em;
     }
 
     :global(.rowHeader) {
