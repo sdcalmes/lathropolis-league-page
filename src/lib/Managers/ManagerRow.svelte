@@ -7,8 +7,6 @@
 
     let retired = false;
 
-    console.log(manager);
-    console.log(rosters);
     const roster = rosters.rosters.filter(obj => {
         return obj.roster_id === manager.roster;
     })[0];
