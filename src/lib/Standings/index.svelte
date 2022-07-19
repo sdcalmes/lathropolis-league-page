@@ -1685,7 +1685,7 @@
 {/if}
 
 <h1 style="margin: 0">All Time H2H</h1>
-<div class="h1Sub">(with playoffs)</div>
+<div class="h1Sub">(with playoffs. Red background means &lt; 30%, Green means &gt; 70%)</div>
 
 <div class="h2hTable">
     <Head>
