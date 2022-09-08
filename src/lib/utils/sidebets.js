@@ -2,7 +2,20 @@ export const sidebets = [
     {
         "year": 2022,
         "sidebets": [
-
+          {
+            "owner1": "Drew",
+            "owner2": "Andy",
+            "reward": "Toothbrush Bet: Winner makes loser brush teeth at any time (one time).",
+            "details": "Week 1: TE Yardage (Schultz vs Kmet)",
+            "winner": ""
+          },
+          {
+            "owner1": "James",
+            "owner2": "Joe",
+            "reward": "Loser must take a shot/drink out of “Coopers Kupp” as concocted by the winner. Gentleman’s rules applied, no induced vomiting from ingredients.",
+            "details": "Week 1: H2H Team Scoring",
+            "winner": ""
+          },
         ]
     },
     {
@@ -19,7 +32,8 @@ export const sidebets = [
                 "owner1": "Drew",
                 "owner2": "Joe",
                 "reward": "loser eats an entire head of lettuce throughout the weekend. ",
-                "details": "Week 2: \"Lettuce Pray\" - Head to Head straight up"
+                "details": "Week 2: \"Lettuce Pray\" - Head to Head straight up",
+                "winner": "Drew"
               },
               {
                 "owner1": "Drew",
