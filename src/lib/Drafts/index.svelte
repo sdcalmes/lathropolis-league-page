@@ -22,7 +22,7 @@
     }
 </style>
 
-
+<!--
 {#await upcomingDraftData }
 	<div class="loading">
 		<p>Retrieving upcoming draft...</p>
@@ -33,9 +33,10 @@
     <h4>Upcoming {upcomingDraft.year} Draft</h4>
     <Draft draftData={upcomingDraft} />
 {:catch error}
-	<!-- promise was rejected -->
+	promise was rejected
 	<p>Something went wrong: {error.message}</p>
 {/await}
+-->
 
 
 {#await previousDraftsData }
