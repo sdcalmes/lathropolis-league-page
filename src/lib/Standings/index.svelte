@@ -13,7 +13,7 @@
     const sortOrder = ["fptsAgainst", "divisionTies", "divisionWins", "fpts", "ties", "wins"];
 
     // Column order from left to right
-    const columnOrder = [{name: "W", field: "wins"}, {name: "T", field: "ties"}, {name: "L", field: "losses"}, {name: "Div W", field: "divisionWins"}, {name: "Div T", field: "divisionTies"}, {name: "Div L", field: "divisionLosses"}, {name: "FPTS", field: "fpts"}, {name: "FPTS Against", field: "fptsAgainst"}, {name: "Streak", field: "streak"}]
+    const columnOrder = [{name: "W", field: "wins"}, {name: "T", field: "ties"}, {name: "L", field: "losses"}, {name: "FPTS", field: "fpts"}, {name: "FPTS Against", field: "fptsAgainst"}, {name: "Streak", field: "streak"}]
 
     let loading = true;
     let preseason = false;
@@ -296,22 +296,95 @@
             "11": "Matt Dallman",
             "12": "Jake Folz"
           }
+        },
+        "2022": {
+          "regular_standings": {
+            "1": "Jake Folz",
+            "2": "Andy Keal",
+            "3": "Matt Dallman",
+            "4": "Sam Calmes",
+            "5": "James Stecker",
+            "6": "Joey Janz",
+            "7": "justin alt",
+            "8": "Joe Keal",
+            "9": "Victor Markus",
+            "10": "Luke Fowler",
+            "11": "James Olson",
+            "12": "Drew Davis"
+          },
+          "final_standings": {
+            
+          }
+        }
+      },
+      "total_w_l": {
+        "Drew Davis": {
+          "w": 93,
+          "l": 68
+        },
+        "Victor Markus": {
+          "w": 80,
+          "l": 81
+        },
+        "justin alt": {
+          "w": 80,
+          "l": 81
+        },
+        "Joey Janz": {
+          "w": 84,
+          "l": 77
+        },
+        "Jake Folz": {
+          "w": 75,
+          "l": 86
+        },
+        "Matt Dallman": {
+          "w": 80,
+          "l": 81
+        },
+        "Sam Calmes": {
+          "w": 96,
+          "l": 65
+        },
+        "James Stecker": {
+          "w": 74,
+          "l": 87
+        },
+        "Andy Keal": {
+          "w": 85,
+          "l": 76
+        },
+        "Peter Toninato": {
+          "w": 12,
+          "l": 14
+        },
+        "Joe Keal": {
+          "w": 71,
+          "l": 90
+        },
+        "Luke Fowler": {
+          "w": 67,
+          "l": 94
+        },
+        "James Olson": {
+          "w": 69,
+          "l": 66
         }
       },
       "average_regular_standing": {
-        "Drew Davis": 3.25,
-        "Sam Calmes": 4.38,
-        "Andy Keal": 5.88,
-        "Matt Dallman": 6.0,
-        "Victor Markus": 6.5,
+        "Drew Davis": 4.22,
+        "Sam Calmes": 4.33,
+        "Andy Keal": 5.44,
+        "Matt Dallman": 5.67,
         "Peter Toninato": 6.5,
-        "James Olson": 6.83,
-        "Joey Janz": 6.88,
+        "Victor Markus": 6.78,
+        "Joey Janz": 6.78,
         "justin alt": 7.0,
-        "Luke Fowler": 7.5,
-        "James Stecker": 7.88,
-        "Joe Keal": 7.88,
-        "Jake Folz": 8.12
+        "Jake Folz": 7.33,
+        "James Olson": 7.43,
+        "James Stecker": 7.56,
+        "Luke Fowler": 7.78,
+        "Joe Keal": 7.89
       },
       "average_final_standing": {
         "Drew Davis": 3.0,
@@ -329,19 +402,19 @@
         "Jake Folz": 8.38
       },
       "average_standing_difference": {
-        "Victor Markus": 0.62,
-        "James Stecker": 0.5,
+        "Drew Davis": 1.22,
+        "Victor Markus": 0.9,
         "justin alt": 0.38,
-        "Sam Calmes": 0.26,
-        "Drew Davis": 0.25,
-        "Matt Dallman": 0.25,
-        "Joe Keal": 0.0,
-        "Luke Fowler": -0.12,
-        "Andy Keal": -0.24,
-        "Jake Folz": -0.26,
-        "Joey Janz": -0.5,
+        "Sam Calmes": 0.21,
+        "James Stecker": 0.18,
+        "Luke Fowler": 0.16,
+        "Joe Keal": 0.01,
+        "Matt Dallman": -0.08,
+        "James Olson": -0.57,
+        "Joey Janz": -0.6,
+        "Andy Keal": -0.68,
         "Peter Toninato": -1.0,
-        "James Olson": -1.17
+        "Jake Folz": -1.05
       },
       "head_to_head": [
         [
@@ -357,7 +430,7 @@
             [
               "Drew Davis",
               {
-                "w": 6,
+                "w": 7,
                 "l": 6
               }
             ],
@@ -365,7 +438,7 @@
               "Jake Folz",
               {
                 "w": 4,
-                "l": 6
+                "l": 7
               }
             ],
             [
@@ -378,21 +451,21 @@
             [
               "James Stecker",
               {
-                "w": 8,
+                "w": 9,
                 "l": 4
               }
             ],
             [
               "Joe Keal",
               {
-                "w": 8,
+                "w": 9,
                 "l": 3
               }
             ],
             [
               "Joey Janz",
               {
-                "w": 5,
+                "w": 6,
                 "l": 5
               }
             ],
@@ -407,7 +480,7 @@
               "Matt Dallman",
               {
                 "w": 6,
-                "l": 8
+                "l": 9
               }
             ],
             [
@@ -421,7 +494,7 @@
               "Sam Calmes",
               {
                 "w": 5,
-                "l": 5
+                "l": 6
               }
             ],
             [
@@ -447,7 +520,7 @@
               "Andy Keal",
               {
                 "w": 6,
-                "l": 6
+                "l": 7
               }
             ],
             [
@@ -461,7 +534,7 @@
               "Jake Folz",
               {
                 "w": 7,
-                "l": 5
+                "l": 6
               }
             ],
             [
@@ -475,21 +548,21 @@
               "James Stecker",
               {
                 "w": 4,
-                "l": 5
+                "l": 6
               }
             ],
             [
               "Joe Keal",
               {
                 "w": 5,
-                "l": 5
+                "l": 6
               }
             ],
             [
               "Joey Janz",
               {
                 "w": 5,
-                "l": 4
+                "l": 5
               }
             ],
             [
@@ -502,7 +575,7 @@
             [
               "Matt Dallman",
               {
-                "w": 4,
+                "w": 5,
                 "l": 5
               }
             ],
@@ -517,7 +590,7 @@
               "Sam Calmes",
               {
                 "w": 5,
-                "l": 7
+                "l": 8
               }
             ],
             [
@@ -542,14 +615,14 @@
             [
               "Andy Keal",
               {
-                "w": 6,
+                "w": 7,
                 "l": 4
               }
             ],
             [
               "Drew Davis",
               {
-                "w": 5,
+                "w": 6,
                 "l": 7
               }
             ],
@@ -563,7 +636,7 @@
             [
               "James Olson",
               {
-                "w": 6,
+                "w": 7,
                 "l": 4
               }
             ],
@@ -584,14 +657,14 @@
             [
               "Joey Janz",
               {
-                "w": 3,
+                "w": 4,
                 "l": 7
               }
             ],
             [
               "Luke Fowler",
               {
-                "w": 10,
+                "w": 11,
                 "l": 4
               }
             ],
@@ -599,7 +672,7 @@
               "Matt Dallman",
               {
                 "w": 7,
-                "l": 6
+                "l": 7
               }
             ],
             [
@@ -613,7 +686,7 @@
               "Sam Calmes",
               {
                 "w": 3,
-                "l": 7
+                "l": 8
               }
             ],
             [
@@ -653,7 +726,7 @@
               "Jake Folz",
               {
                 "w": 4,
-                "l": 6
+                "l": 7
               }
             ],
             [
@@ -667,28 +740,28 @@
               "James Stecker",
               {
                 "w": 5,
-                "l": 4
+                "l": 5
               }
             ],
             [
               "Joe Keal",
               {
                 "w": 2,
-                "l": 7
+                "l": 8
               }
             ],
             [
               "Joey Janz",
               {
                 "w": 7,
-                "l": 1
+                "l": 2
               }
             ],
             [
               "Luke Fowler",
               {
                 "w": 4,
-                "l": 4
+                "l": 5
               }
             ],
             [
@@ -696,13 +769,6 @@
               {
                 "w": 5,
                 "l": 3
-              }
-            ],
-            [
-              "Peter Toninato",
-              {
-                "w": 0,
-                "l": 0
               }
             ],
             [
@@ -715,14 +781,14 @@
             [
               "Victor Markus",
               {
-                "w": 4,
+                "w": 5,
                 "l": 3
               }
             ],
             [
               "justin alt",
               {
-                "w": 5,
+                "w": 6,
                 "l": 5
               }
             ]
@@ -735,13 +801,13 @@
               "Andy Keal",
               {
                 "w": 4,
-                "l": 8
+                "l": 9
               }
             ],
             [
               "Drew Davis",
               {
-                "w": 5,
+                "w": 6,
                 "l": 4
               }
             ],
@@ -755,7 +821,7 @@
             [
               "James Olson",
               {
-                "w": 4,
+                "w": 5,
                 "l": 5
               }
             ],
@@ -769,7 +835,7 @@
             [
               "Joe Keal",
               {
-                "w": 10,
+                "w": 11,
                 "l": 3
               }
             ],
@@ -784,7 +850,7 @@
               "Luke Fowler",
               {
                 "w": 4,
-                "l": 6
+                "l": 7
               }
             ],
             [
@@ -812,13 +878,13 @@
               "Victor Markus",
               {
                 "w": 7,
-                "l": 3
+                "l": 4
               }
             ],
             [
               "justin alt",
               {
-                "w": 5,
+                "w": 6,
                 "l": 9
               }
             ]
@@ -831,13 +897,13 @@
               "Andy Keal",
               {
                 "w": 3,
-                "l": 8
+                "l": 9
               }
             ],
             [
               "Drew Davis",
               {
-                "w": 5,
+                "w": 6,
                 "l": 5
               }
             ],
@@ -851,7 +917,7 @@
             [
               "James Olson",
               {
-                "w": 7,
+                "w": 8,
                 "l": 2
               }
             ],
@@ -859,7 +925,7 @@
               "James Stecker",
               {
                 "w": 3,
-                "l": 10
+                "l": 11
               }
             ],
             [
@@ -879,7 +945,7 @@
             [
               "Luke Fowler",
               {
-                "w": 8,
+                "w": 9,
                 "l": 4
               }
             ],
@@ -908,14 +974,14 @@
               "Victor Markus",
               {
                 "w": 5,
-                "l": 7
+                "l": 8
               }
             ],
             [
               "justin alt",
               {
                 "w": 6,
-                "l": 3
+                "l": 4
               }
             ]
           ]
@@ -927,13 +993,13 @@
               "Andy Keal",
               {
                 "w": 5,
-                "l": 5
+                "l": 6
               }
             ],
             [
               "Drew Davis",
               {
-                "w": 4,
+                "w": 5,
                 "l": 5
               }
             ],
@@ -941,13 +1007,13 @@
               "Jake Folz",
               {
                 "w": 7,
-                "l": 3
+                "l": 4
               }
             ],
             [
               "James Olson",
               {
-                "w": 1,
+                "w": 2,
                 "l": 7
               }
             ],
@@ -975,7 +1041,7 @@
             [
               "Luke Fowler",
               {
-                "w": 6,
+                "w": 7,
                 "l": 5
               }
             ],
@@ -983,7 +1049,7 @@
               "Matt Dallman",
               {
                 "w": 4,
-                "l": 7
+                "l": 8
               }
             ],
             [
@@ -996,7 +1062,7 @@
             [
               "Sam Calmes",
               {
-                "w": 6,
+                "w": 7,
                 "l": 5
               }
             ],
@@ -1037,20 +1103,20 @@
               "Jake Folz",
               {
                 "w": 4,
-                "l": 10
+                "l": 11
               }
             ],
             [
               "James Olson",
               {
-                "w": 4,
+                "w": 5,
                 "l": 4
               }
             ],
             [
               "James Stecker",
               {
-                "w": 6,
+                "w": 7,
                 "l": 4
               }
             ],
@@ -1058,14 +1124,14 @@
               "Joe Keal",
               {
                 "w": 4,
-                "l": 8
+                "l": 9
               }
             ],
             [
               "Joey Janz",
               {
                 "w": 5,
-                "l": 6
+                "l": 7
               }
             ],
             [
@@ -1099,7 +1165,7 @@
             [
               "Victor Markus",
               {
-                "w": 7,
+                "w": 8,
                 "l": 4
               }
             ],
@@ -1107,7 +1173,7 @@
               "justin alt",
               {
                 "w": 6,
-                "l": 7
+                "l": 8
               }
             ]
           ]
@@ -1118,7 +1184,7 @@
             [
               "Andy Keal",
               {
-                "w": 8,
+                "w": 9,
                 "l": 6
               }
             ],
@@ -1126,13 +1192,13 @@
               "Drew Davis",
               {
                 "w": 5,
-                "l": 4
+                "l": 5
               }
             ],
             [
               "Jake Folz",
               {
-                "w": 6,
+                "w": 7,
                 "l": 7
               }
             ],
@@ -1160,7 +1226,7 @@
             [
               "Joey Janz",
               {
-                "w": 7,
+                "w": 8,
                 "l": 4
               }
             ],
@@ -1189,13 +1255,13 @@
               "Sam Calmes",
               {
                 "w": 2,
-                "l": 13
+                "l": 14
               }
             ],
             [
               "Victor Markus",
               {
-                "w": 4,
+                "w": 5,
                 "l": 5
               }
             ],
@@ -1203,7 +1269,7 @@
               "justin alt",
               {
                 "w": 4,
-                "l": 6
+                "l": 7
               }
             ]
           ]
@@ -1230,13 +1296,6 @@
               {
                 "w": 2,
                 "l": 2
-              }
-            ],
-            [
-              "James Olson",
-              {
-                "w": 0,
-                "l": 0
               }
             ],
             [
@@ -1310,21 +1369,21 @@
             [
               "Andy Keal",
               {
-                "w": 5,
+                "w": 6,
                 "l": 5
               }
             ],
             [
               "Drew Davis",
               {
-                "w": 7,
+                "w": 8,
                 "l": 5
               }
             ],
             [
               "Jake Folz",
               {
-                "w": 7,
+                "w": 8,
                 "l": 3
               }
             ],
@@ -1353,7 +1412,7 @@
               "Joey Janz",
               {
                 "w": 5,
-                "l": 6
+                "l": 7
               }
             ],
             [
@@ -1366,7 +1425,7 @@
             [
               "Matt Dallman",
               {
-                "w": 13,
+                "w": 14,
                 "l": 2
               }
             ],
@@ -1388,13 +1447,13 @@
               "Victor Markus",
               {
                 "w": 7,
-                "l": 5
+                "l": 6
               }
             ],
             [
               "justin alt",
               {
-                "w": 5,
+                "w": 6,
                 "l": 4
               }
             ]
@@ -1428,20 +1487,20 @@
               "James Olson",
               {
                 "w": 3,
-                "l": 4
+                "l": 5
               }
             ],
             [
               "James Stecker",
               {
-                "w": 3,
+                "w": 4,
                 "l": 7
               }
             ],
             [
               "Joe Keal",
               {
-                "w": 7,
+                "w": 8,
                 "l": 5
               }
             ],
@@ -1456,14 +1515,14 @@
               "Luke Fowler",
               {
                 "w": 4,
-                "l": 7
+                "l": 8
               }
             ],
             [
               "Matt Dallman",
               {
                 "w": 5,
-                "l": 4
+                "l": 5
               }
             ],
             [
@@ -1476,7 +1535,7 @@
             [
               "Sam Calmes",
               {
-                "w": 5,
+                "w": 6,
                 "l": 7
               }
             ],
@@ -1490,7 +1549,7 @@
             [
               "justin alt",
               {
-                "w": 5,
+                "w": 6,
                 "l": 6
               }
             ]
@@ -1524,20 +1583,20 @@
               "James Olson",
               {
                 "w": 5,
-                "l": 5
+                "l": 6
               }
             ],
             [
               "James Stecker",
               {
                 "w": 9,
-                "l": 5
+                "l": 6
               }
             ],
             [
               "Joe Keal",
               {
-                "w": 3,
+                "w": 4,
                 "l": 6
               }
             ],
@@ -1551,14 +1610,14 @@
             [
               "Luke Fowler",
               {
-                "w": 7,
+                "w": 8,
                 "l": 6
               }
             ],
             [
               "Matt Dallman",
               {
-                "w": 6,
+                "w": 7,
                 "l": 4
               }
             ],
@@ -1573,14 +1632,14 @@
               "Sam Calmes",
               {
                 "w": 4,
-                "l": 5
+                "l": 6
               }
             ],
             [
               "Victor Markus",
               {
                 "w": 6,
-                "l": 5
+                "l": 6
               }
             ],
             [
@@ -1598,7 +1657,9 @@
 }
 
     let h2h_data = h2h_table.data.Lathropolis.head_to_head;
-
+    let total_w_l = h2h_table.data.Lathropolis.total_w_l;
+    let w_l_keys = Object.keys(total_w_l);
+    let w_l_entries = Object.entries(total_w_l);
 
     //headers.push('Total')
 
@@ -1636,7 +1697,6 @@
 
     .standingsTable {
         max-width: 100%;
-        overflow-x: scroll;
         margin: 0.5em 0 5em;
     }
 
@@ -1685,6 +1745,7 @@
 {/if}
 
 <h1 style="margin: 0">All Time H2H</h1>
+<span>Updated: 11/3/2022 (Post week 8 , 2022)</span>
 <div class="h1Sub">(with playoffs. Red background means &lt; 30%, Green means &gt; 70%)</div>
 
 <div class="h2hTable">
@@ -1707,4 +1768,23 @@
         {/each}
     </Row>
     {/each}
+</div>
+
+<h1 style="margin: 0">Overall Regular Season W-L</h1>
+<div class="standingsTable">
+  <DataTable table$aria-label="League Standings" >
+    <Head>
+      <Row>
+          {#each w_l_entries as [key, standing]}
+              <Cell class="center">{key}</Cell>
+          {/each}
+      </Row>
+  </Head>
+    <Body>
+      <!-- 	Standing	 -->
+      {#each w_l_entries as [key, standing]}
+          <Cell class="center">{standing.w} - {standing.l}</Cell>
+      {/each}
+  </Body>
+</DataTable>
 </div>
