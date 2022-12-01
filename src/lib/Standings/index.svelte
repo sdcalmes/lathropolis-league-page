@@ -138,7 +138,7 @@
 {/if}
 
 <h1 style="margin: 0">All Time H2H</h1>
-<span>Updated: 11/3/2022 (Post week 8 , 2022)</span>
+<span>Updated: 11/30/2022 (Post week 12 , 2022)</span>
 <div class="h1Sub">(with playoffs. Red background means &lt; 30%, Green means &gt; 70%)</div>
 
 <div class="h2hTable">
