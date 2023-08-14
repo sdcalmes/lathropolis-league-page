@@ -16,11 +16,20 @@
 	function switchTheme() {
 		lightTheme = !lightTheme;
 		let themeLink = document.head.querySelector("#theme");
+		let logoLink = document.querySelector("#logo");
 		if (!themeLink) {
 			themeLink = document.createElement("link");
 			themeLink.rel = "stylesheet";
 			themeLink.id = "theme";
 		}
+
+		if (lightTheme) {
+			logoLink.src = "./badge-light.png";
+		}
+		else {
+			logoLink.src = "./badge-dark.png";
+		}
+		console.log(logoLink);
 		themeLink.href = `/smui${lightTheme ? "" : "-dark"}.css`;
 		document.head
 		.querySelector('link[href="/smui-dark.css"]')
@@ -46,7 +55,7 @@
 	}
 
 	#logo {
-		width: 80px;
+		width: 200px;
 		display: block;
 		margin: 0 auto;
 		padding: 10px;
@@ -82,7 +91,7 @@
 </style>
 
 <nav>
-	<a href="/"><img id="logo" alt="league logo" src="./badge.png" /></a>
+	<a href="/"><img id="logo" alt="league logo" src="./badge-dark.png" /></a>
 
 	<div class="container">
 		<IconButton

@@ -99,7 +99,7 @@
         background-color: var(--WR);
     }
 
-    .RB {
+    .RB,.FB {
         background-color: var(--RB);
     }
 
@@ -140,6 +140,14 @@
 
     .LB {
         background-color: #98c097;
+    }
+
+    .FLEX {
+        background-color: #c398c1;
+    }
+
+    .SB {
+        background-color: #524141;
     }
 
     .favoritePlayer {
@@ -209,16 +217,24 @@
         </div>
     {/if}
     <!-- Favorite player (optioonal) -->
-    {#if viewManager.favoritePlayer}
+    {#if viewManager.favoritePlayer || viewManager.favoritePlayerLocal}
         <div class="infoSlot">
             <div class="infoLabel">
                 Favorite Player
             </div>
             <div class="infoIcon playerIcon">
-                <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player"/>
+                {#if viewManager.favoritePlayerLocal}
+                    <img class="favoritePlayer" src="./players/{viewManager.favoritePlayerName}.jpg" alt="favorite player" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
+                {:else}
+                    <img class="favoritePlayer" src="https://sleepercdn.com/content/nfl/players/{viewManager.favoritePlayer}.jpg" alt="favorite player" onerror="this.onerror=null; this.src='/managers/question.jpg'"/>
+                {/if}
             </div>
             <div class="infoAnswer">
-                {players[viewManager.favoritePlayer].fn} {players[viewManager.favoritePlayer].ln}
+                {#if viewManager.favoritePlayerLocal}
+                    {viewManager.favoritePlayerName}
+                {:else}
+                    {players[viewManager.favoritePlayer].fn} {players[viewManager.favoritePlayer].ln}
+                {/if}
             </div>
         </div>
     {/if}
