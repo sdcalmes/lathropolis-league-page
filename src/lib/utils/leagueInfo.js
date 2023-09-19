@@ -5,6 +5,8 @@ export const dues = 50; // (optional) used in template constitution page
 export const dynasty = true; // true for dynasty leagues, false for redraft and keeper
 export const enableBlog = false; // requires VITE_CONTENTFUL_ACCESS_TOKEN and VITE_CONTENTFUL_SPACE environment variables
 
+// Adding a useless comment to force branch rebuild.
+
 /*   STEP 2   */
 export const homepageText = `
   Dynasty of Dudes is a fresh dynasty league containing eight <a href="https://lathropolisffl.sdcalmes.com/" target="_blank">Lathropolis FFL</a> members and a couple other buddies. The startup draft was in Summer '23 and the boys are amped to
